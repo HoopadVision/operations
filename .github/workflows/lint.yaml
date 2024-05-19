@@ -9,4 +9,4 @@ jobs:
       - uses: actions/checkout@v4
       - uses: super-linter/super-linter@v6.5.0
         env:
-          SUPERLINT_TOKEN: ${{ secrets.SUPERLINT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
