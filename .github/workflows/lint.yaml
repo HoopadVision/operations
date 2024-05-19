@@ -2,18 +2,11 @@ on:
     workflow_call:
 
 jobs:
-  build:
+  lint:
+    name: Lint
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - name: Install pre-commit
-      run: |
-        python -m pip install pre-commit
-    - name: Run pre-commit
-      run: pre-commit run forbid-binary --all-files
-          # check-yaml \
-          # check-json \
-          # trailing-whitespace \
-          # check-added-large-files \
-          # forbid-binary \
-          # --all-files
+      - uses: actions/checkout@v4
+      - uses: super-linter/super-linter@v6.5.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.SUPERLINTERTOKEN }}
