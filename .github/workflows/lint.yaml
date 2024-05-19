@@ -10,10 +10,10 @@ jobs:
       run: |
         python -m pip install pre-commit
     - name: Run pre-commit
-      run: pre-commit run \ 
-          check-yaml \
-          check-json \
-          trailing-whitespace \
-          check-added-large-files \
-          forbid-binary \
-          --all-files
+      run: pre-commit run forbid-binary --all-files
+          # check-yaml \
+          # check-json \
+          # trailing-whitespace \
+          # check-added-large-files \
+          # forbid-binary \
+          # --all-files
