@@ -1,0 +1,9 @@
+on:
+    workflow_call:
+
+jobs:
+    cd:
+        runs-on: ubuntu-latest
+        steps:
+            - name: CD (TODO)
+              run: echo "TODO work!"
